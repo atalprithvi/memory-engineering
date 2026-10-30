@@ -1,0 +1,2 @@
+[console_scripts]
+memory-agent = memory_agent.__main__:cli

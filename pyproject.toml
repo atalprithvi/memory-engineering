@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-agent"
+version = "0.1.0"
+description = "Memory-backed agent that plans work and calls local MCP tools."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp==4.1.4",
+    "numpy==2.5.4",
+    "openai==3.37.0",
+    "python-dotenv==1.2.4",
+]
+
+[project.scripts]
+memory-agent = "memory_agent.__main__:cli"
+
+[tool.setuptools.packages.find]
+include = ["memory_agent*"]
+exclude = ["tests*"]
